@@ -55,7 +55,7 @@ class Queue(object):
 
     def _arn(self):
         parts = self.id.split('/')
-        if self.connection.region.name == 'cn-north-1':
+        if self.connection.region.name == 'cn-north-1' or self.connection.region.name == 'cn-northwest-1':
             partition = 'aws-cn'
         else:
             partition = 'aws'
